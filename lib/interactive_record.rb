@@ -17,7 +17,7 @@ class InteractiveRecord
     table_info.each do |row|
       column_names << row["name"]
     end
-    column_names.compact
+     column_names.compact
    end
   
    def initialize(options={})
@@ -51,6 +51,10 @@ class InteractiveRecord
    def self.find_by_name(name)
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
     DB[:conn].execute(sql)
+   end
+   
+   def self.find_by 
+    sql = "SELECT * FROM "
    end
   
 end
